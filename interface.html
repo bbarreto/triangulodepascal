@@ -1,0 +1,21 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Triângulo de Pascal</title>
+</head>
+<body>
+<form>
+<h1>Triângulo de Pascal</h1>
+<label>Quantidade de linhas: <input name="linhas" type="number" min="1" max="35" step="1" value="10"></label>
+<button type="submit">Gerar!</button>
+<div id="triangulo"></div>
+</form>
+<script>
+document.querySelector("form").onsubmit = function () {
+	linhas = document.querySelector("input[name='linhas']").value;
+	document.getElementById("triangulo").innerHTML = "<img src='piramide.php?linhas="+linhas+"'>";
+	return false;
+}
+</script>
+</body>
+</html>
